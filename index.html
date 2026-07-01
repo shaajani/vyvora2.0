@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyvora | Premium Packaged Drinking Water</title>
+    <meta name="description" content="Vyvora delivers 100% pure, hygienic, and premium packaged drinking water. Customize labels for weddings, corporate events, birthdays, and anniversaries.">
+    <meta name="keywords" content="Vyvora, premium water, packaged drinking water, customized water bottles, bulk water orders, Vijayawada water supply">
+    <link rel="icon" type="image/png" href="assets/vyvora_logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide Icons via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-water">
+            <div class="wave"></div>
+        </div>
+        <div class="loader-text">VYVORA</div>
+        <div class="loader-sub">Purity in Every Drop</div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header id="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link">
+                    <span class="brand-text">VYVORA</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#customized">Customized Bottles</a></li>
+                <li><a href="#bulk">Bulk Orders</a></li>
+                <li><a href="#safety">Safety & Quality</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="nav-order-btn btn btn-primary" onclick="openOrderModal()">Order Now</button>
+                </li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                        <i data-lucide="moon" class="dark-icon"></i>
+                        <i data-lucide="sun" class="light-icon" style="display: none;"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Top Right Logo - Always Visible/Present -->
+            <div class="header-logo-container">
+                <img src="assets/vyvora_logo.png" alt="Vyvora Logo" class="top-right-logo">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="bubble-container" id="hero-bubbles"></div>
+            <div class="hero-wave"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-tag">A Drop of Freshness</span>
+                    <h1>100% Pure Drinking Water with Quality, Trust & Freshness.</h1>
+                    <p class="hero-subtitle">Premium packaged drinking water for homes, offices, events, and businesses with safe, hygienic, and customized packaging.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="openOrderModal()">Order Now</button>
+                        <a href="#customized" class="btn btn-outline btn-lg">Customized Bottles</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="bottle-showcase">
+                        <div class="bottle-bg-glow"></div>
+                        <img src="assets/vyvora_bottle_500ml.jpg" alt="Vyvora Premium Water Bottle" class="main-bottle-img">
+                        <div class="water-splash-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Vyvora -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Who We Are</span>
+                    <h2>About Vyvora</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="about-image-wrapper">
+                        <img src="assets/vyvora_bottle_wavy.jpg" alt="Vyvora Fresh Water Bottle" class="about-img">
+                        <div class="floating-badge">
+                            <span class="badge-num">100%</span>
+                            <span class="badge-txt">Pure & Certified</span>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h3>Committed to Delivering Safe, Hygienic & Premium Quality Water</h3>
+                        <p>At Vyvora, we believe that pure drinking water is the foundation of a healthy life. We are dedicated to providing the highest standards of packaged drinking water for families, corporate events, weddings, and local businesses.</p>
+                        
+                        <p>Our water undergoes a state-of-the-art purification process utilizing advanced filtration systems. We adhere strictly to all government regulations, safety guidelines, and environment-friendly packaging standards. Fully licensed and certified, Vyvora stands for quality, trust, and ultimate freshness.</p>
+                        
+                        <ul class="about-features">
+                            <li><i data-lucide="check-circle" class="feat-icon"></i> Advanced Multi-Stage Purification (RO + UV + Minerals)</li>
+                            <li><i data-lucide="check-circle" class="feat-icon"></i> Hygienically Sealed & Quality Tested at Every Stage</li>
+                            <li><i data-lucide="check-circle" class="feat-icon"></i> BIS Certified & Government Approved Facilities</li>
+                            <li><i data-lucide="check-circle" class="feat-icon"></i> Custom Wrappers for Birthdays, Weddings & Corporate Events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customized Bottles config Section -->
+        <section id="customized" class="customizer-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Custom Packaging</span>
+                    <h2>Customized Bottles for Your Events</h2>
+                    <p class="section-desc">Design a customized wrapper for any special occasion. Make your events unique with personalized branding.</p>
+                </div>
+                
+                <div class="grid grid-2 customizer-grid">
+                    <!-- Live Configurator Form -->
+                    <div class="card glass-card config-form-card">
+                        <h3>Configure Your Label</h3>
+                        <form id="custom-bottle-form" onsubmit="handleCustomSubmit(event)">
+                            <div class="form-group">
+                                <label for="cust-name">Full Name *</label>
+                                <input type="text" id="cust-name" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cust-phone">Phone Number *</label>
+                                <input type="tel" id="cust-phone" required placeholder="Enter your contact number">
+                            </div>
+
+                            <div class="grid grid-2" style="gap: 15px; margin-bottom: 0;">
+                                <div class="form-group">
+                                    <label for="cust-event-type">Event Type</label>
+                                    <select id="cust-event-type" onchange="updatePreview()">
+                                        <option value="Wedding">Wedding</option>
+                                        <option value="Seemantham">Seemantham Ceremony</option>
+                                        <option value="Birthday">Birthday Party</option>
+                                        <option value="Corporate">Corporate Event</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Religious">Religious Function</option>
+                                        <option value="Promotion">Business Promotion</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cust-size">Bottle Size</label>
+                                    <select id="cust-size" onchange="updatePreview()">
+                                        <option value="250 ml">250 ml (Short)</option>
+                                        <option value="500 ml" selected>500 ml (Standard)</option>
+                                        <option value="1 Litre">1 Litre (Large)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cust-event-name">Event Name / Celebrant Name *</label>
+                                <input type="text" id="cust-event-name" required placeholder="e.g. Aakash weds Priyanka" value="Aakash weds Priyanka" oninput="updatePreview()">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cust-text">Custom Text / Description *</label>
+                                <input type="text" id="cust-text" required placeholder="e.g. Kapavarapu's Wedding Celebrations" value="Kapavarapu's Wedding Celebrations" oninput="updatePreview()">
+                            </div>
+
+                            <div class="grid grid-2" style="gap: 15px; margin-bottom: 0;">
+                                <div class="form-group">
+                                    <label for="cust-quantity">Quantity *</label>
+                                    <input type="number" id="cust-quantity" required min="10" value="100" placeholder="Min. 10 bottles">
+                                    <span class="input-helper">Minimum 10 bottles</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cust-color">Label Theme Color</label>
+                                    <input type="color" id="cust-color" value="#050a30" oninput="updatePreview()">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cust-logo">Upload Event Logo/Photo</label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="cust-logo" accept="image/*" onchange="handleImageUpload(event)">
+                                    <span class="file-label"><i data-lucide="upload-cloud"></i> Choose Image File</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">
+                                <i data-lucide="message-square"></i> Send Customized Request to WhatsApp
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Live Dynamic Preview -->
+                    <div class="preview-container flex-center">
+                        <div class="preview-panel">
+                            <h4>Live Label Mockup</h4>
+                            <div class="preview-showcase">
+                                <div class="bottle-mockup">
+                                    <div class="bottle-cap"></div>
+                                    <div class="bottle-neck"></div>
+                                    <div class="bottle-body">
+                                        <!-- Real photo of custom bottle is blended behind. We will construct a realistic wrapper layer -->
+                                        <div class="bottle-water-reflection"></div>
+                                        <div class="bottle-label-wrap" id="live-label" style="background-color: #050a30;">
+                                            <div class="label-shine"></div>
+                                            <div class="label-brand">VYVORA</div>
+                                            <div class="label-logo-placeholder" id="label-logo-view">
+                                                <i data-lucide="droplet" class="droplet-icon"></i>
+                                            </div>
+                                            <div class="label-event-type" id="label-event-type-view">Wedding</div>
+                                            <div class="label-event-name" id="label-event-name-view">Aakash weds Priyanka</div>
+                                            <div class="label-custom-text" id="label-custom-text-view">Kapavarapu's Wedding Celebrations</div>
+                                            <div class="label-footer">Contact Us For Events: +91 7095227142</div>
+                                        </div>
+                                    </div>
+                                    <div class="bottle-bottom"></div>
+                                </div>
+                            </div>
+                            <p class="preview-disclaimer">This is a live mockup representation of your custom water bottle wrapper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bulk Orders Section -->
+        <section id="bulk" class="bulk-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Water Supply Packs</span>
+                    <h2>Bulk Supply & Water Packs</h2>
+                    <p class="section-desc">Reliable packaged water delivery for events, offices, institutions, and daily home use.</p>
+                </div>
+                
+                <div class="grid grid-3 bulk-grid">
+                    <div class="card glass-card bulk-card text-center">
+                        <div class="bulk-icon"><i data-lucide="package"></i></div>
+                        <h3>Pack of 12</h3>
+                        <p class="bulk-desc">Perfect for small household gatherings, executive meetings, or short road trips.</p>
+                        <ul class="bulk-features">
+                            <li>Available in 500ml / 1L</li>
+                            <li>Hygienic Shrink Pack</li>
+                            <li>Prompt Delivery</li>
+                        </ul>
+                        <button class="btn btn-outline btn-block" onclick="openOrderModal('Pack of 12')">Order Pack</button>
+                    </div>
+
+                    <div class="card glass-card bulk-card text-center active-card">
+                        <div class="card-badge">POPULAR</div>
+                        <div class="bulk-icon"><i data-lucide="layers"></i></div>
+                        <h3>Pack of 24</h3>
+                        <p class="bulk-desc">The standard choice for large families, corporate offices, and birthday parties.</p>
+                        <ul class="bulk-features">
+                            <li>Available in 250ml / 500ml / 1L</li>
+                            <li>Heavy duty protection wrap</li>
+                            <li>Doorstep Delivery</li>
+                        </ul>
+                        <button class="btn btn-primary btn-block" onclick="openOrderModal('Pack of 24')">Order Pack</button>
+                    </div>
+
+                    <div class="card glass-card bulk-card text-center">
+                        <div class="bulk-icon"><i data-lucide="truck"></i></div>
+                        <h3>Bulk Supply</h3>
+                        <p class="bulk-desc">Tailored supply contracts for marriage halls, educational events, and hotels.</p>
+                        <ul class="bulk-features">
+                            <li>Any Custom Quantities (Min. 100)</li>
+                            <li>Special wholesale rates</li>
+                            <li>Flexible scheduling options</li>
+                        </ul>
+                        <button class="btn btn-outline btn-block" onclick="openOrderModal('Bulk Supply')">Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety & Quality Section -->
+        <section id="safety" class="safety-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Pure Standards</span>
+                    <h2>Safety & Quality Process</h2>
+                    <p class="section-desc">Our state-of-the-art treatment ensures that every bottle contains nothing but pure hydration.</p>
+                </div>
+                
+                <div class="grid grid-4 safety-grid">
+                    <div class="safety-card text-center">
+                        <div class="safety-icon"><i data-lucide="shield-check"></i></div>
+                        <h4>100% Pure Drinking Water</h4>
+                        <p>Sourced from high-grade natural reserves and verified for essential minerals.</p>
+                    </div>
+                    <div class="safety-card text-center">
+                        <div class="safety-icon"><i data-lucide="flask-conical"></i></div>
+                        <h4>Advanced RO + UV + Minerals</h4>
+                        <p>Reverse Osmosis filtration coupled with UV sterilization and re-mineralization.</p>
+                    </div>
+                    <div class="safety-card text-center">
+                        <div class="safety-icon"><i data-lucide="sparkles"></i></div>
+                        <h4>Hygienically Packed</h4>
+                        <p>Fully automated bottling and sealing line to eliminate human contamination.</p>
+                    </div>
+                    <div class="safety-card text-center">
+                        <div class="safety-icon"><i data-lucide="award"></i></div>
+                        <h4>Government Licensed</h4>
+                        <p>Registered and meeting all mandatory safety guidelines and quality certificates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Vyvora -->
+        <section class="why-choose-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Why Vyvora</span>
+                    <h2>Our Quality Commitment</h2>
+                </div>
+                
+                <div class="grid grid-3 why-grid">
+                    <div class="card glass-card why-card">
+                        <i data-lucide="clock" class="why-icon"></i>
+                        <h4>Fast & Reliable Delivery</h4>
+                        <p>Our dedicated transport network ensures your water arrives exactly when you need it.</p>
+                    </div>
+                    
+                    <div class="card glass-card why-card">
+                        <i data-lucide="dollar-sign" class="why-icon"></i>
+                        <h4>Affordable Pricing</h4>
+                        <p>Premium quality water at rates that fit comfortably in your event or family budget.</p>
+                    </div>
+                    
+                    <div class="card glass-card why-card">
+                        <i data-lucide="users" class="why-icon"></i>
+                        <h4>Excellent Customer Support</h4>
+                        <p>Prompt assistance from our service team for bulk modifications and orders.</p>
+                    </div>
+                </div>
+
+                <!-- Animated Stat Counters -->
+                <div class="stat-counters grid grid-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-num" data-val="100">0</div>
+                        <div class="stat-lbl">Purity Percentage</div>
+                    </div>
+                    <div class="stat-item text-center">
+                        <div class="stat-num" data-val="500">0</div>
+                        <div class="stat-lbl">Happy Events Served</div>
+                    </div>
+                    <div class="stat-item text-center">
+                        <div class="stat-num" data-val="10000">0</div>
+                        <div class="stat-lbl">Daily Litres Supplied</div>
+                    </div>
+                    <div class="stat-item text-center">
+                        <div class="stat-num" data-val="100">0</div>
+                        <div class="stat-lbl">Satisfaction Rate %</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Questions</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is the minimum quantity for customized bottles?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We accept customized label orders starting from just 10 bottles. This allows you to have personalized wrappers even for smaller private family gatherings and events!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I send my own logo or image for the wrapper?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can upload your logo or photo directly using our live configurator on the website. When you submit the request, you'll be redirected to WhatsApp where you can attach and send the original photo file to our manager.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What purification technologies does Vyvora use?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We utilize a multi-stage process including Reverse Osmosis (RO), Ultra Violet (UV) treatment, and ozone sterilization, followed by rich mineral addition to ensure health, purity, and standard taste.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Where do you deliver? Do you deliver outside Vijayawada?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our main distribution facility is in Vijayawada (Sanath Nagar). We regularly deliver across Vijayawada and surrounding regions. For large bulk orders, we can arrange delivery to other cities as well.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2>Contact Us</h2>
+                </div>
+                
+                <div class="grid grid-2 contact-grid">
+                    <div class="contact-info">
+                        <h3>Reach Out Directly</h3>
+                        <p>Have questions about customized labels or monthly water packages? Get in touch with our management team.</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i data-lucide="phone"></i>
+                                <div>
+                                    <h5>Primary Contact</h5>
+                                    <p><a href="tel:+917095227142">+91 7095227142</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="user"></i>
+                                <div>
+                                    <h5>Manager Contact</h5>
+                                    <p><a href="tel:+919553509407">+91 9553509407</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <h5>Our Location</h5>
+                                    <p>Door No: 16-155, Sanath Nagar, Ramalayam Street, Vijayawada – 520007</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="clock"></i>
+                                <div>
+                                    <h5>Business Hours</h5>
+                                    <p>Monday - Sunday: 8:00 AM - 9:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-actions">
+                            <a href="https://wa.me/917095227142" target="_blank" class="btn btn-whatsapp">
+                                <i data-lucide="message-square"></i> Chat via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card glass-card contact-form-card">
+                        <h3>Send an Enquiry</h3>
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="cnt-name">Name *</label>
+                                <input type="text" id="cnt-name" required placeholder="Your Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="cnt-phone">Phone Number *</label>
+                                <input type="tel" id="cnt-phone" required placeholder="Your Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="cnt-msg">Message *</label>
+                                <textarea id="cnt-msg" rows="4" required placeholder="Describe your requirement (sizes, customized orders, quantities)"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send via WhatsApp</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">VYVORA</span>
+                <p>Premium, secure, and mineral-enriched drinking water. Purity is our oath, freshness is our promise.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://wa.me/917095227142" target="_blank" aria-label="WhatsApp"><i data-lucide="message-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#customized">Customized Bottles</a></li>
+                    <li><a href="#bulk">Bulk Orders</a></li>
+                    <li><a href="#safety">Safety & Quality</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Details</h4>
+                <p><i data-lucide="phone" class="foot-icon"></i> +91 7095227142</p>
+                <p><i data-lucide="user" class="foot-icon"></i> Manager: +91 9553509407</p>
+                <p><i data-lucide="map-pin" class="foot-icon"></i> Sanath Nagar, Vijayawada - 520007</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive news, offers, and delivery slot updates.</p>
+                <form id="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" aria-label="Subscribe"><i data-lucide="send"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <p>&copy; 2026 Vyvora. All Rights Reserved.</p>
+                <div class="footer-policy-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal (Floating Form for Standard/Bulk Order Clicked) -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal" onclick="closeOrderModal()">&times;</span>
+            <h2>Place Pack / Bulk Order</h2>
+            <p>Fill out the form below. Clicking submit will automatically package your order detail and forward it directly to our manager's WhatsApp for instant confirmation.</p>
+            
+            <form id="bulk-order-form" onsubmit="handleBulkOrderSubmit(event)">
+                <div class="form-group">
+                    <label for="ord-name">Full Name *</label>
+                    <input type="text" id="ord-name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="ord-phone">Phone Number *</label>
+                    <input type="tel" id="ord-phone" required placeholder="Enter your contact number">
+                </div>
+                <div class="form-group">
+                    <label for="ord-address">Delivery Address *</label>
+                    <textarea id="ord-address" rows="2" required placeholder="Door No, Street Name, Landmark, Area, Vijayawada"></textarea>
+                </div>
+                
+                <div class="grid grid-2" style="gap: 15px; margin-bottom: 0;">
+                    <div class="form-group">
+                        <label for="ord-pack-type">Water Package / Type</label>
+                        <select id="ord-pack-type">
+                            <option value="Pack of 12">Pack of 12</option>
+                            <option value="Pack of 24" selected>Pack of 24</option>
+                            <option value="Bulk Supply">Bulk Contract Supply</option>
+                            <option value="Individual Bottles">Individual Bottles</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ord-size">Bottle Size</label>
+                        <select id="ord-size">
+                            <option value="250 ml">250 ml</option>
+                            <option value="500 ml" selected>500 ml</option>
+                            <option value="1 Litre">1 Litre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="gap: 15px; margin-bottom: 0;">
+                    <div class="form-group">
+                        <label for="ord-quantity">Quantity *</label>
+                        <input type="number" id="ord-quantity" required min="10" value="100" placeholder="Min. 10 items">
+                        <span class="input-helper">Min: 10 items / packs</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ord-date">Desired Delivery Date *</label>
+                        <input type="date" id="ord-date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ord-notes">Special Instructions (Optional)</label>
+                    <input type="text" id="ord-notes" placeholder="e.g. Leave with security, need delivery before noon">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Send Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AI Chatbot UI -->
+    <div id="chat-widget">
+        <!-- Chat trigger bubble button -->
+        <button id="chat-trigger" aria-label="Open Chat Assistant">
+            <i data-lucide="message-circle" class="chat-open-icon"></i>
+            <i data-lucide="x" class="chat-close-icon" style="display: none;"></i>
+        </button>
+
+        <!-- Chat window container -->
+        <div id="chat-window" class="glass-card">
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <img src="assets/vyvora_logo.png" alt="Vyvora Assistant">
+                </div>
+                <div class="chat-title">
+                    <h4>Vyvora Assistant</h4>
+                    <span class="chat-status">Online • Instant Reply</span>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages-container">
+                <!-- Welcome Message -->
+                <div class="chat-msg bot">
+                    <div class="chat-msg-bubble">
+                        Hello! 👋 I am the Vyvora AI assistant. How can I help you today? You can select one of the common questions below.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Reply Chips -->
+            <div class="chat-quick-replies" id="chat-quick-chips">
+                <button class="chip" onclick="askChat('sizes')">Bottle Sizes</button>
+                <button class="chip" onclick="askChat('custom')">Custom Bottles</button>
+                <button class="chip" onclick="askChat('pricing')">Bulk Pricing</button>
+                <button class="chip" onclick="askChat('delivery')">Delivery Areas</button>
+                <button class="chip" onclick="askChat('safety')">Safety Standards</button>
+                <button class="chip" onclick="askChat('contact')">Contact Info</button>
+            </div>
+
+            <!-- Chat input bar -->
+            <form id="chat-input-form" onsubmit="handleChatSubmit(event)">
+                <input type="text" id="chat-user-text" placeholder="Type a message..." autocomplete="off">
+                <button type="submit" aria-label="Send Message"><i data-lucide="send"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Scroll to top"><i data-lucide="arrow-up"></i></button>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
